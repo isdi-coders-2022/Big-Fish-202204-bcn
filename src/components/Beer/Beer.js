@@ -9,7 +9,7 @@ library.add(faHeartS, faHeartR);
 
 const Beer = ({ name, tagline, image_url: imgUrl, favourite, userBeer }) => {
   return (
-    <li className="beer">
+    <>
       <div className="beer-info">
         <div>
           <h2 className="beer-info_name">{name}</h2>
@@ -36,7 +36,7 @@ const Beer = ({ name, tagline, image_url: imgUrl, favourite, userBeer }) => {
           ""
         )}
       </div>
-    </li>
+    </>
   );
 };
 export default Beer;
