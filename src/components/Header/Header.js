@@ -1,23 +1,16 @@
-import { NavLink } from "react-router-dom";
-
 const Header = ({ pageTitle }) => {
   return (
     <header>
       <div>
-        <img src="../public/images/logo.svg" alt="Beer Me Logo" />
-        <NavLink />
+        <img src="" alt="Beer Me Logo" />
       </div>
       <div>
         <h1>{pageTitle}</h1>
       </div>
       <div>
         <ul>
-          <li>
-            <NavLink />
-          </li>
-          <li>
-            <NavLink />
-          </li>
+          <li></li>
+          <li></li>
         </ul>
       </div>
     </header>
