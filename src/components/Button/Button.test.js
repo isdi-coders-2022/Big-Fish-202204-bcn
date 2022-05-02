@@ -9,7 +9,7 @@ describe("Given the Button component", () => {
       const text = "SAVE";
       const action = jest.fn();
 
-      render(<Button text={text} action={action} />);
+      render(<Button onClick={action}>{text}</Button>);
       const button = screen.getByRole("button");
       userEvent.click(button);
 
@@ -20,7 +20,7 @@ describe("Given the Button component", () => {
       const expectedText = "SAVE";
       const action = jest.fn();
 
-      render(<Button text={expectedText} action={action} />);
+      render(<Button onClick={action}>{expectedText}</Button>);
       const button = screen.getByText(expectedText);
 
       expect(button).toBeInTheDocument();
@@ -31,7 +31,7 @@ describe("Given the Button component", () => {
       const expectedText = "SAVE";
       const action = jest.fn();
 
-      render(<Button text={expectedText} action={action} />);
+      render(<Button onClick={action}>{expectedText}</Button>);
       const button = screen.getByText(expectedText);
 
       expect(button).toHaveAccessibleName(expectedText);
