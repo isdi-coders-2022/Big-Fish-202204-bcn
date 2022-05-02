@@ -31,15 +31,14 @@
 - Renderizar un heading con un texto RECIBIDO
 - Renderizar el icono de user si “userBeer”: true
 - Renderizar un texto RECIBIDO
-- Renderizar Renderizar una imagen RECIBIDA
-- Renderizar un boton con el texto VIEW DETAILS
+- Renderizar una imagen RECIBIDA
 - Renderizar un boton con el icono de corazon vacío o relleno dependiendo del “favourite”: true o false
 - Renderizar un boton con el icono de cruz para eliminar si el “userBeer”: true
 - Renderizar un boton con el icono edit si “favourite”: true o “userBeer”: true
 
 ### Pagination
 
-- Renderizar dos botonos con iconos de cruces < > para pasar de pagina
+- Renderizar dos botones con iconos de cruces < > para pasar de pagina
 - Renderizar un numero segun la pagina actual
 
 ### Navigation
