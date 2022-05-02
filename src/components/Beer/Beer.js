@@ -9,10 +9,10 @@ library.add(faHeartS, faHeartR);
 
 const Beer = ({ name, tagline, image_url: imgUrl, favourite, userBeer }) => {
   return (
-    <li className="beer">
+    <>
       <div className="beer-info">
-        <div>
-          <h2 className="beer-info_name">{name}</h2>
+        <div className="beer-info__top">
+          <h2 className="beer-info__top__name">{name}</h2>
           {userBeer ? (
             <Button>
               <FontAwesomeIcon icon={faPenToSquare} />
@@ -36,7 +36,7 @@ const Beer = ({ name, tagline, image_url: imgUrl, favourite, userBeer }) => {
           ""
         )}
       </div>
-    </li>
+    </>
   );
 };
 export default Beer;
