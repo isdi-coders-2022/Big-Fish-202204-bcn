@@ -5,7 +5,12 @@ function App() {
   return (
     <div className="App">
       <BeerContainer className="beer">
-        <Beer favourite={true} userBeer={true} />
+        <Beer
+          favourite={true}
+          userBeer={true}
+          name={"cerveza top"}
+          tagline={"esta cerve es cojonudisima"}
+        />
       </BeerContainer>
     </div>
   );
