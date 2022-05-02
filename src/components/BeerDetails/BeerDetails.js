@@ -7,7 +7,7 @@ const BeerDetails = ({ beer }) => {
     <>
       <section className="beer-details__info">
         <h2>{beer.name}</h2>
-        <div className="beer-details__info-list">
+        <div className="info-list">
           <ul>
             <li>
               <h3>First brewed</h3>
@@ -32,10 +32,11 @@ const BeerDetails = ({ beer }) => {
             </li>
           </ul>
         </div>
-        <div className="beer-details__info-image">
+        <div className="info-image">
           <img src={beer.image_url} alt={beer.name} />
         </div>
       </section>
+      <section className="beer-details__description"></section>
     </>
   );
 };
