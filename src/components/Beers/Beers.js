@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import beers from "../../data/BeersData";
 import Beer from "../Beer/Beer";
-
+import beers from "../../data/BeersData";
 import BeerContainer from "../BeerContainer/BeerContainer";
 
 const BeersStyled = styled.ul`
