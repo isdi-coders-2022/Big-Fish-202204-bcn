@@ -1,6 +1,4 @@
-
 import beer from "./BeerData";
-
 import Beer from "./components/Beer/Beer";
 import BeerContainer from "./components/BeerContainer/BeerContainer";
 import BeerDetails from "./components/BeerDetails/BeerDetails";
@@ -18,9 +16,7 @@ function App() {
           }
         />
       </BeerContainer>
-
       <BeerDetails beer={beer} />
-
     </div>
   );
 }
