@@ -1,12 +1,10 @@
-
-
-import "./App.css";
+import beer from "./BeerData";
 import Beer from "./components/Beer/Beer";
 import BeerContainer from "./components/BeerContainer/BeerContainer";
+import BeerDetails from "./components/BeerDetails/BeerDetails";
 
 function App() {
   return (
-
     <div className="App">
       <BeerContainer className="beer">
         <Beer
@@ -16,7 +14,7 @@ function App() {
           tagline={"esta cerve es cojonudisima"}
         />
       </BeerContainer>
-
+      <BeerDetails beer={beer} />
     </div>
   );
 }
