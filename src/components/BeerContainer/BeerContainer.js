@@ -7,6 +7,7 @@ const BeerContainer = styled.li`
   border-radius: 10px;
   background: #dfa30a;
   display: flex;
+  margin: 10px 0px;
 
   .beer-info {
     display: flex;
@@ -26,11 +27,17 @@ const BeerContainer = styled.li`
       h2 {
         display: contents;
         font-size: 40px;
+        height: 30px;
       }
     }
     &__name {
       color: white;
     }
+  }
+
+  .name-container {
+    height: 55px;
+    overflow-x: hidden;
   }
 
   .right-buttons-container {
