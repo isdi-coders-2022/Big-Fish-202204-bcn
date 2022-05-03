@@ -6,6 +6,7 @@ const HeaderContainer = styled.header`
   display: flex;
   flex-direction: row;
   background-color: ${headerBckgroundColor};
+  width: 100vw;
   height: 90px;
   overflow: visible;
 

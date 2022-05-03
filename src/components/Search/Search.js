@@ -1,8 +1,10 @@
+import SearchInput from "../SearchInput/SearchInput";
+
 const Search = () => {
   return (
-    <div>
-      <input type="search" placeholder="&#xF002; Search" />
-    </div>
+    <SearchInput>
+      <input type="text" placeholder="Search" />
+    </SearchInput>
   );
 };
 
