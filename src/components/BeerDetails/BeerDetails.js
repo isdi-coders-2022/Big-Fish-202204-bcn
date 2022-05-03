@@ -1,6 +1,12 @@
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faHeart as faHeartR } from "@fortawesome/free-regular-svg-icons";
+import { faHeart as faHeartS } from "@fortawesome/free-solid-svg-icons";
+import Button from "../Button/Button";
 import BeerColor from "../BeerColor/BeerColor";
 import Stars from "../Stars/Stars";
 import Tags from "../Tags/Tags";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+library.add(faHeartS, faHeartR);
 
 const BeerDetails = ({ beer }) => {
   return (
@@ -8,6 +14,9 @@ const BeerDetails = ({ beer }) => {
       <section className="beer-details__info">
         <div className="beer-details__info-title">
           <h2>{beer.name}</h2>
+          <Button>
+            <FontAwesomeIcon icon={beer.favourite ? faHeartS : faHeartR} />
+          </Button>
         </div>
         <div className="beer-details__info-text">
           <div className="info-list">

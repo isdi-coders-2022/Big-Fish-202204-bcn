@@ -10,12 +10,24 @@ const BeerDetailsContainer = styled.section`
 
   .beer-details__info {
     background-color: #dfa30a;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     .beer-details__info-title {
       font-size: 30px;
       font-weight: bold;
       color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        margin: 50px;
+      }
+      button {
+        padding: 0;
+        margin: 50px;
+        width: 100px;
+        font-size: 50px;
+      }
     }
     .beer-details__info-text {
       display: flex;
@@ -24,20 +36,19 @@ const BeerDetailsContainer = styled.section`
       .info-list {
         h3 {
           color: #fff;
-          font-size: 25px;
+          font-size: 30px;
           font-weight: bold;
         }
         p {
           color: #000;
+          font-size: 5vw;
         }
       }
       .info-image {
         img {
-          position: absolute;
-          width: 88px;
-          height: 342.29px;
-          left: 285px;
-          top: 147px;
+          width: 115px;
+          height: 450px;
+          margin: 50px;
         }
       }
     }
@@ -45,12 +56,12 @@ const BeerDetailsContainer = styled.section`
   .beer-details__description {
     h3 {
       color: #16213e;
-      font-size: 25px;
+      font-size: 30px;
       font-weight: bold;
     }
     p {
       color: #000;
-      font-size: 10%;
+      font-size: 5vw;
     }
   }
 `;
