@@ -138,6 +138,8 @@ const beers = [
     brewers_tips:
       "Play around with the fermentation temperature to get the best flavour profile from the individual yeasts.",
     contributed_by: "Ali Skinner <AliSkinner>",
+    favourite: true,
+    userBeer: true,
   },
   {
     id: 8,
@@ -278,6 +280,8 @@ const beers = [
     brewers_tips:
       "Once the primary fermentation is complete get this beer as cold as you can and let it mature for as long as you've got.",
     contributed_by: "Sam Mason <samjbmason>",
+    favourite: false,
+    userBeer: false,
   },
   {
     id: 81,
