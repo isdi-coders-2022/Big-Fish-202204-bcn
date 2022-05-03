@@ -1,5 +1,6 @@
 import beer from "./BeerData";
 import BeerDetails from "./components/BeerDetails/BeerDetails";
+import BeerDetailsContainer from "./components/BeerDetailsContainer/BeerDetailsContainer";
 import Beers from "./components/Beers/Beers";
 import Header from "./components/Header/Header";
 import Search from "./components/Search/Search";
@@ -10,10 +11,9 @@ function App() {
       <Header pageTitle={"Beer Directory"} />
       <Search />
       <Beers />
-      <BeerDetails beer={beer} />
-      {/* <BeerDetailsContainer>
+      <BeerDetailsContainer>
         <BeerDetails beer={beer} />
-      </BeerDetailsContainer> */}
+      </BeerDetailsContainer>
     </div>
   );
 }
