@@ -2,8 +2,10 @@ import beer from "./BeerData";
 import Beer from "./components/Beer/Beer";
 import BeerContainer from "./components/BeerContainer/BeerContainer";
 import BeerDetails from "./components/BeerDetails/BeerDetails";
+import BeerDetailsContainer from "./components/BeerDetailsContainer/BeerDetailsContainer";
 import Header from "./components/Header/Header";
 import Search from "./components/Search/Search";
+
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
           }
         />
       </BeerContainer>
-      <BeerDetails beer={beer} />
+      <BeerDetailsContainer>
+        <BeerDetails beer={beer} />
+      </BeerDetailsContainer>
     </div>
   );
 }
