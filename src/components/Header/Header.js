@@ -1,19 +1,19 @@
+import HeaderContainer from "../HeaderContainer/HeaderContainer";
+
 const Header = ({ pageTitle }) => {
   return (
-    <header>
-      <div>
-        <img src="" alt="Beer Me Logo" />
+    <HeaderContainer>
+      <div className="header__logo">
+        <img src="/images/logo.svg" alt="Beer Me Logo" />
       </div>
-      <div>
+      <div className="header__title">
         <h1>{pageTitle}</h1>
       </div>
-      <div>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </header>
+      <ul className="header__navigation">
+        <li></li>
+        <li></li>
+      </ul>
+    </HeaderContainer>
   );
 };
 export default Header;
