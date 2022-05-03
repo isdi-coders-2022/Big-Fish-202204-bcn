@@ -1,11 +1,16 @@
 import styled from "styled-components";
+import {
+  appColor,
+  beerCardColor,
+  beerNameColor,
+} from "../../mixings/elementsColours";
 
 const BeerContainer = styled.li`
   height: 135px;
   width: 382px;
   padding-left: 10px;
   border-radius: 10px;
-  background: #dfa30a;
+  background: ${beerCardColor};
   display: flex;
 
   .beer-info {
@@ -18,18 +23,17 @@ const BeerContainer = styled.li`
       display: flex;
       align-items: end;
       width: 100%;
-
       padding-right: 5px;
-      color: white;
       height: 50px;
 
       h2 {
+        color: ${beerNameColor};
         display: contents;
         font-size: 40px;
       }
     }
     &__name {
-      color: white;
+      color: ${beerNameColor};
     }
   }
 
@@ -47,7 +51,7 @@ const BeerContainer = styled.li`
 
   .tagline {
     width: 100%;
-    color: #16213e;
+    color: ${appColor};
     font-size: 20px;
     font-weight: bold;
   }
