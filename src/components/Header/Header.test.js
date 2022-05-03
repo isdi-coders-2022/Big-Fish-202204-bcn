@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Header from "./Header";
 
-describe("given the Header function", () => {
+describe("Given the Header component", () => {
   describe("When it's renderized", () => {
     test("Then it should have a image with alternative text 'Beer Me Logo'", () => {
       const expectedText = "Beer Me Logo";
