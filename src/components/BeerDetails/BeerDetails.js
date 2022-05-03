@@ -36,7 +36,22 @@ const BeerDetails = ({ beer }) => {
           <img src={beer.image_url} alt={beer.name} />
         </div>
       </section>
-      <section className="beer-details__description"></section>
+      <section className="beer-details__description">
+        <ul>
+          <li>
+            <h3 className="title-description">Description</h3>
+            <p>{beer.description}</p>
+          </li>
+          <li>
+            <h3 className="title-description">Food pairing</h3>
+            <p>{beer.food_pairing}</p>
+          </li>
+          <li>
+            <h3 className="title-description">Brewer's Tips</h3>
+            <p>{beer.brewers_tips}</p>
+          </li>
+        </ul>
+      </section>
     </>
   );
 };
