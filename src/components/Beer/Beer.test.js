@@ -3,7 +3,7 @@ import Beer from "./Beer";
 
 describe("Given the Beer component", () => {
   describe("When it receives the name 'Test Beer'", () => {
-    test("Then it should render a header with text 'Test Beer'", () => {
+    test("Then it should render a heading with text 'Test Beer'", () => {
       const expectedText = "Test Beer";
 
       render(<Beer name={expectedText} />);
@@ -12,7 +12,8 @@ describe("Given the Beer component", () => {
       expect(beerheading).toBeInTheDocument();
     });
   });
-  describe("When it receives favourite and userBeer props with 'true'", () => {
+
+  describe("When it receives favourite and userBeer props with true", () => {
     test("Then it should render 3 buttons", () => {
       const expectedNumberOfButtons = 3;
       const isfavourite = true;
@@ -20,9 +21,10 @@ describe("Given the Beer component", () => {
 
       render(<Beer favourite={isfavourite} userBeer={isUserBeer} />);
       const buttons = screen.getAllByRole("button");
-      expect(buttons.length).toEqual(expectedNumberOfButtons);
+      expect(buttons).toHaveLength(expectedNumberOfButtons);
     });
   });
+
   describe("When it receives favourite true and userBeer false", () => {
     test("Then it should render 1 button", () => {
       const expectedNumberOfButtons = 1;
@@ -31,7 +33,7 @@ describe("Given the Beer component", () => {
 
       render(<Beer favourite={isfavourite} userBeer={isUserBeer} />);
       const buttons = screen.getAllByRole("button");
-      expect(buttons.length).toEqual(expectedNumberOfButtons);
+      expect(buttons).toHaveLength(expectedNumberOfButtons);
     });
   });
 });

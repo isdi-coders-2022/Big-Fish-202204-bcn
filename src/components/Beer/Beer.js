@@ -14,7 +14,9 @@ const Beer = ({ name, tagline, image_url: imgUrl, favourite, userBeer }) => {
     <>
       <div className="beer-info">
         <div className="beer-info__top">
-          <h2 className="beer-info__top__name">{name}</h2>
+          <div className="name-container">
+            <h2 className="beer-info__top__name">{name}</h2>
+          </div>
           {userBeer ? (
             <Button>
               <FontAwesomeIcon icon={faPenToSquare} />
@@ -25,11 +27,7 @@ const Beer = ({ name, tagline, image_url: imgUrl, favourite, userBeer }) => {
         </div>
         <p className="tagline">{tagline}</p>
       </div>
-      <img
-        src={"https://images.punkapi.com/v2/192.png"}
-        alt={name}
-        className="beer-img"
-      />
+      <img src={imgUrl} alt={name} className="beer-img" />
       <div className="right-buttons-container">
         <Button>
           <FontAwesomeIcon icon={favourite ? faHeartS : faHeartR} />

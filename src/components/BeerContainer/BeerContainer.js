@@ -12,6 +12,7 @@ const BeerContainer = styled.li`
   border-radius: 10px;
   background: ${beerCardColor};
   display: flex;
+  margin: 10px 0px;
 
   .beer-info {
     display: flex;
@@ -30,11 +31,17 @@ const BeerContainer = styled.li`
         color: ${beerNameColor};
         display: contents;
         font-size: 40px;
+        height: 30px;
       }
     }
     &__name {
       color: ${beerNameColor};
     }
+  }
+
+  .name-container {
+    height: 55px;
+    overflow-x: hidden;
   }
 
   .right-buttons-container {
