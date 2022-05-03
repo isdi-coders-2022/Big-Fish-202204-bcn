@@ -13,13 +13,13 @@ describe("Given the BeerDetails component", () => {
       expect(title).toBeInTheDocument();
     });
 
-    test("Then it should render the text 6 list element", () => {
+    test("Then it should render the text 9 list element", () => {
       const expectedNumberList = 9;
 
       render(<BeerDetails beer={beer} />);
-      const numberList = screen.getAllByRole("listitem").length;
+      const list = screen.getAllByRole("listitem");
 
-      expect(numberList).toBe(expectedNumberList);
+      expect(list).toHaveLength(expectedNumberList);
     });
 
     test("Then it should render an image wit accessible name 'Punk IPA 2007 - 2010'", () => {

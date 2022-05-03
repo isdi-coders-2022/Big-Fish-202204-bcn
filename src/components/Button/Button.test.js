@@ -20,20 +20,9 @@ describe("Given the Button component", () => {
       const action = jest.fn();
 
       render(<Button onClick={action}>{expectedText}</Button>);
-      const button = screen.getByText(expectedText);
+      const button = screen.getByRole("button", { name: expectedText });
 
       expect(button).toBeInTheDocument();
-      expect(button).toHaveAccessibleName(expectedText);
-    });
-
-    test("Then it should render a button with 'SAVE' as its accessible name", () => {
-      const expectedText = "SAVE";
-      const action = jest.fn();
-
-      render(<Button onClick={action}>{expectedText}</Button>);
-      const button = screen.getByText(expectedText);
-
-      expect(button).toHaveAccessibleName(expectedText);
     });
   });
 });
