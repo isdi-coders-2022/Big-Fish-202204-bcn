@@ -80,5 +80,7 @@ const beer = {
   brewers_tips:
     "While it may surprise you, this version of Punk IPA isn't dry hopped but still packs a punch! To make the best of the aroma hops make sure they are fully submerged and add them just before knock out for an intense hop hit.",
   contributed_by: "Sam Mason <samjbmason>",
+  favourite: true,
+  custom: true,
 };
 export default beer;
