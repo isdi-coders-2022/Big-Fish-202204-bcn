@@ -1,5 +1,6 @@
 import styled from "styled-components";
-const headerBckgroundColor = "#16213e";
+import { appColor } from "../../mixings/elementsColours";
+const headerBckgroundColor = appColor;
 
 const HeaderContainer = styled.header`
   display: flex;
