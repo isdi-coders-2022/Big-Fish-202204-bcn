@@ -23,7 +23,9 @@ const beerReducer = (beers, action) => {
 
     case editBeerActionType:
       newbeers = beers.map((beer) => {
-        return beer.id !== action.id ? { ...beer } : { ...action.editedBeer };
+        return beer.id !== action.editedBeer.id
+          ? { ...beer }
+          : { ...beer, ...action.editedBeer };
       });
       break;
 
