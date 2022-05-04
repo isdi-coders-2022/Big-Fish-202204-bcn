@@ -1,11 +1,5 @@
-import Header from "../../components/Header/Header";
-
 const AddBeerPage = () => {
-  return (
-    <div className="AddBeerPage">
-      <Header pageTitle={"Add New Beer"} />
-    </div>
-  );
+  return <div className="AddBeerPage"></div>;
 };
 
 export default AddBeerPage;
