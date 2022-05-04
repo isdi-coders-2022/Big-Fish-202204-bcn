@@ -1,4 +1,4 @@
-import { toggleFavouriteActionType } from "./actionTypes";
+import { toggleFavouriteActionType } from "../actionTypes";
 
 export const toggleFavouriteActionCreator = (id) => ({
   type: toggleFavouriteActionType,
