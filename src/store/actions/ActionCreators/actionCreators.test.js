@@ -15,7 +15,7 @@ describe("Given the toggleFavouriteActionCreator function", () => {
   describe("When it receives a 7", () => {
     test("Then it should return an action object with properties type: 'toggle-favourite', id:7", () => {
       const id = 7;
-      const expectedAction = { type: toggleFavouriteActionType, id: id };
+      const expectedAction = { type: toggleFavouriteActionType, id };
 
       const action = toggleFavouriteActionCreator(id);
 
@@ -28,7 +28,7 @@ describe("Given the DeleteBeerActionCreator function", () => {
   describe("When it receives a 2", () => {
     test("Then it should return an action object with properties type: 'delete-beer', id:2", () => {
       const id = 2;
-      const expectedAction = { type: deleteBeerActionType, id: id };
+      const expectedAction = { type: deleteBeerActionType, id };
 
       const action = deleteBeerActionCreator(id);
 
