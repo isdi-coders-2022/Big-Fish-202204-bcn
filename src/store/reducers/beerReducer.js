@@ -16,9 +16,7 @@ const beerReducer = (beers, action) => {
       });
       break;
     case deleteBeerActionType:
-      newbeers = beers.map((beer) => {
-        return beer.id !== action.id ? { ...beer } : "";
-      });
+      newbeers = beers.filter((beer) => beer.id !== action.id);
       break;
 
     case rateBeerActionType:
