@@ -4,6 +4,7 @@ import {
   toggleFavouriteActionCreator,
 } from "./actionCreators";
 
+
 describe("Given the toggleFavouriteActionCreator function", () => {
   describe("When it receives a 7", () => {
     test("Then it should return an action object with properties type: 'toggle-favourite', id:7", () => {
@@ -17,6 +18,7 @@ describe("Given the toggleFavouriteActionCreator function", () => {
   });
 });
 
+
 describe("Given the addBeerActionCreator function", () => {
   describe("When it receives a beer object", () => {
     test("Then it should return an action object with type: 'add-beer' and beer= {}", () => {
@@ -29,3 +31,4 @@ describe("Given the addBeerActionCreator function", () => {
     });
   });
 });
+
