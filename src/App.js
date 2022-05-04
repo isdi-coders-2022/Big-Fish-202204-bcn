@@ -1,20 +1,24 @@
-import beer from "./BeerData";
-import BeerDetails from "./components/BeerDetails/BeerDetails";
-import BeerDetailsContainer from "./components/BeerDetailsContainer/BeerDetailsContainer";
-import Beers from "./components/Beers/Beers";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Search from "./components/Search/Search";
+import Navigation from "./components/Navigation/Navigation";
+import AddBeerPage from "./pages/AddBeerPage/AddBeerPage";
+import BeerListPage from "./pages/BeerListPage/BeerListPage";
+import MyBeersPage from "./pages/MyBeersPage/MyBeersPage";
+import NotFoundPage from "./pages/NotFounPage/NotFoundPage";
 
 function App() {
   return (
-    <div className="App">
-      <Header pageTitle={"Beer Directory"} />
-      <Search />
-      <Beers />
-      <BeerDetailsContainer>
-        <BeerDetails beer={beer} />
-      </BeerDetailsContainer>
-    </div>
+    <>
+      <Header pageTitle={"Add New Beer"} />
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Navigate to="/beers" />}></Route>
+        <Route path="/beers" element={<BeerListPage />}></Route>
+        <Route path="/my-beers" element={<MyBeersPage />}></Route>
+        <Route path="/add-beer" element={<AddBeerPage />}></Route>
+        <Route path="*" element={<NotFoundPage />}></Route>
+      </Routes>
+    </>
   );
 }
 
