@@ -2,6 +2,7 @@ import { toggleFavouriteActionType } from "../actions/actionTypes";
 
 const beerReducer = (beers, action) => {
   let newbeers;
+
   switch (action.type) {
     case toggleFavouriteActionType:
       newbeers = beers.map((beer) => {
