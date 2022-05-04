@@ -3,10 +3,10 @@ import {
   setLoadingOnActionType,
 } from "../UIActionTypes";
 
-export const setLoadingOffActionCreator = {
+export const setLoadingOffActionCreator = () => ({
   type: setLoadingOffActionType,
-};
+});
 
-export const setLoadingOnActionCreator = {
+export const setLoadingOnActionCreator = () => ({
   type: setLoadingOnActionType,
-};
+});
