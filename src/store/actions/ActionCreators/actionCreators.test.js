@@ -1,5 +1,5 @@
 import { toggleFavouriteActionType } from "../actionTypes";
-import { toggleFavouriteActionCreator } from "./actionCreator";
+import { toggleFavouriteActionCreator } from "./actionCreators";
 
 describe("Given the toggleFavouriteActionCreator function", () => {
   describe("When it receives a 7", () => {
