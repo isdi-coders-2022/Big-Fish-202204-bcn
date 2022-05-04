@@ -1,4 +1,7 @@
-import { toggleFavouriteActionCreator } from "../actions/ActionCreators/actionCreators";
+import {
+  deleteBeerActionCreator,
+  toggleFavouriteActionCreator,
+} from "../actions/ActionCreators/actionCreators";
 import beerReducer from "./beerReducer";
 
 describe("Given the beerReducer component", () => {
@@ -32,6 +35,18 @@ describe("Given the beerReducer component", () => {
       const resultGrup = beerReducer(beersGrup, action);
 
       expect(resultGrup).toEqual(beersGrup);
+    });
+  });
+  describe("When it receives an initial state array with three beers and an action to delete with the id 1", () => {
+    test("Then it should return a copy of the array without the beer with id 1", () => {
+      const currentBeers = [{ id: 1 }, { id: 2 }, { id: 3 }];
+      const id = 1;
+      const action = deleteBeerActionCreator(id);
+      const expectedBeers = [{ id: 2 }, { id: 3 }];
+
+      const nextBeers = beerReducer(currentBeers, action);
+
+      expect(nextBeers).toEqual(expectedBeers);
     });
   });
 });
