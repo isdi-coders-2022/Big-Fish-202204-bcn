@@ -3,6 +3,7 @@ import {
   deleteBeerActionCreator,
   toggleFavouriteActionCreator,
   editBeerActionCreator,
+  loadBeersActionCreator,
 } from "../actions/ActionCreators/actionCreators";
 import beerReducer from "./beerReducer";
 
@@ -91,6 +92,25 @@ describe("Given the beerReducer component", () => {
       const resultGrup = beerReducer(beersGrup, action);
 
       expect(resultGrup[positionToControl]).toEqual(expectedBeer);
+    });
+  });
+  describe("When it receives a grup of beers and the order to load", () => {
+    test("Then it should return a same grup of beers with the news propieties userBeer,favourite,rating", () => {
+      const beersGrup = [
+        { id: 0, text: "UwU" },
+        { id: 1, text: "UwU" },
+        { id: 2, text: "UwU" },
+      ];
+      const expectedBeersGrup = [
+        { id: 0, text: "UwU", userBeer: false, favourite: false, rating: 0 },
+        { id: 1, text: "UwU", userBeer: false, favourite: false, rating: 0 },
+        { id: 2, text: "UwU", userBeer: false, favourite: false, rating: 0 },
+      ];
+
+      const action = loadBeersActionCreator();
+      const resultGrup = beerReducer(beersGrup, action);
+
+      expect(resultGrup).toEqual(expectedBeersGrup);
     });
   });
 });
