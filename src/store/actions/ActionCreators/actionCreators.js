@@ -4,6 +4,7 @@ import {
   deleteBeerActionType,
   editBeerActionType,
   rateBeerActionType,
+  loadBeersActionType,
 } from "../actionTypes";
 
 export const toggleFavouriteActionCreator = (id) => ({
@@ -30,4 +31,9 @@ export const rateBeerActionCreator = (id, rating) => ({
   type: rateBeerActionType,
   id,
   rating,
+});
+
+export const loadBeersActionCreator = (beers) => ({
+  type: loadBeersActionType,
+  beers,
 });

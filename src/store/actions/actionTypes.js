@@ -8,3 +8,4 @@ export const editBeerActionType = "edit-beer";
 
 export const rateBeerActionType = "rate-beer";
 
+export const loadBeersActionType = "load-beers";
