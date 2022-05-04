@@ -1,9 +1,9 @@
-import { addBeerActionType, toggleFavouriteActionType } from "../actionTypes";
+import { addBeerActionType, toggleFavouriteActionType, deleteBeerActionType } from "../actionTypes";
 import {
   addBeerActionCreator,
   toggleFavouriteActionCreator,
+  deleteBeerActionCreator,
 } from "./actionCreators";
-
 
 describe("Given the toggleFavouriteActionCreator function", () => {
   describe("When it receives a 7", () => {
@@ -18,7 +18,17 @@ describe("Given the toggleFavouriteActionCreator function", () => {
   });
 });
 
+describe("Given the DeleteBeerActionCreator function", () => {
+  describe("When it receives a 2", () => {
+    test("Then it should return an action object with properties type: 'delete-beer', id:2", () => {
+      const id = 2;
+      const expectedAction = { type: deleteBeerActionType, id: id };
 
+      const action = deleteBeerActionCreator(2);
+    });
+  });
+});
+  
 describe("Given the addBeerActionCreator function", () => {
   describe("When it receives a beer object", () => {
     test("Then it should return an action object with type: 'add-beer' and beer= {}", () => {
