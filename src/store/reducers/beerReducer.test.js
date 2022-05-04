@@ -2,6 +2,7 @@ import {
   rateBeerActionCreator,
   deleteBeerActionCreator,
   toggleFavouriteActionCreator,
+  editBeerActionCreator,
 } from "../actions/ActionCreators/actionCreators";
 import beerReducer from "./beerReducer";
 
@@ -38,8 +39,8 @@ describe("Given the beerReducer component", () => {
       expect(resultGrup).toEqual(beersGrup);
     });
   });
-  describe("When it receives a grup of beers and the order to rate the second with a 3", () => {
-    test("Then it should return a grup of beers with the second beer rated at 3", () => {
+  describe("When it receives a grup of beers and the order to rate the third with a 3", () => {
+    test("Then it should return a grup of beers with the third beer rated at 3", () => {
       const beersGrup = [
         { id: 0, favourite: false, rating: 0 },
         { id: 1, favourite: false, rating: 0 },
@@ -59,9 +60,9 @@ describe("Given the beerReducer component", () => {
       const resultGrup = beerReducer(beersGrup, action);
 
       expect(resultGrup[positionToControl]).toEqual(expectedGrup);
+    });
   });
-});
-  
+
   describe("When it receives an initial state array with three beers and an action to delete with the id 1", () => {
     test("Then it should return a copy of the array without the beer with id 1", () => {
       const currentBeers = [{ id: 1 }, { id: 2 }, { id: 3 }];
@@ -72,6 +73,24 @@ describe("Given the beerReducer component", () => {
       const nextBeers = beerReducer(currentBeers, action);
 
       expect(nextBeers).toEqual(expectedBeers);
+    });
+  });
+  describe("When it receives a grup of beers and the order to replace the third for a new one", () => {
+    test("Then it should return a grup of beers with the third changed", () => {
+      const beersGrup = [
+        { id: 0, favourite: false },
+        { id: 1, favourite: false },
+        { id: 2, favourite: false },
+        { id: 3, favourite: false },
+      ];
+      const editedBeer = { id: 2, text: "UwU", favourite: true };
+      const positionToControl = 2;
+      const expectedBeer = { id: 2, favourite: true, text: "UwU" };
+
+      const action = editBeerActionCreator(editedBeer);
+      const resultGrup = beerReducer(beersGrup, action);
+
+      expect(resultGrup[positionToControl]).toEqual(expectedBeer);
     });
   });
 });
