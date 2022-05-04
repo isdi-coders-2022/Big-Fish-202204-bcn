@@ -1,7 +1,8 @@
 import { addBeerActionType, toggleFavouriteActionType, deleteBeerActionType } from "../actionTypes";
 import {
   addBeerActionCreator,
-  toggleFavouriteActionCreator,deleteBeerActionCreator
+  toggleFavouriteActionCreator,
+  deleteBeerActionCreator,
 } from "./actionCreators";
 
 describe("Given the toggleFavouriteActionCreator function", () => {
