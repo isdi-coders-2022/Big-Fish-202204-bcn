@@ -11,6 +11,8 @@ const beerReducer = (beers, action) => {
           : { ...beer };
       });
       break;
+    case 2:
+      break;
 
     default:
       newbeers = [...beers];
