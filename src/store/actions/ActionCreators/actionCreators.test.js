@@ -1,4 +1,8 @@
-import { addBeerActionType, toggleFavouriteActionType, deleteBeerActionType } from "../actionTypes";
+import {
+  addBeerActionType,
+  toggleFavouriteActionType,
+  deleteBeerActionType,
+} from "../actionTypes";
 import {
   addBeerActionCreator,
   toggleFavouriteActionCreator,
@@ -25,10 +29,12 @@ describe("Given the DeleteBeerActionCreator function", () => {
       const expectedAction = { type: deleteBeerActionType, id: id };
 
       const action = deleteBeerActionCreator(2);
+
+      expect(action).toEqual(expectedAction);
     });
   });
 });
-  
+
 describe("Given the addBeerActionCreator function", () => {
   describe("When it receives a beer object", () => {
     test("Then it should return an action object with type: 'add-beer' and beer= {}", () => {
@@ -41,4 +47,3 @@ describe("Given the addBeerActionCreator function", () => {
     });
   });
 });
-
