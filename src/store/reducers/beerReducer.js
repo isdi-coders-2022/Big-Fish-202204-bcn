@@ -3,6 +3,7 @@ import {
   deleteBeerActionType,
   toggleFavouriteActionType,
   editBeerActionType,
+  loadBeersActionType,
 } from "../actions/actionTypes";
 
 const beerReducer = (beers, action) => {
@@ -36,7 +37,11 @@ const beerReducer = (beers, action) => {
           : { ...beer };
       });
       break;
-
+    case loadBeersActionType:
+      newbeers = beers.map((beer) => {
+        return { ...beer, favourite: false, userBeer: false, rating: 0 };
+      });
+      break;
     default:
       newbeers = [...beers];
   }
