@@ -1,4 +1,4 @@
-import { toggleFavouriteActionCreator } from "../actions/actionCreator";
+import { toggleFavouriteActionCreator } from "../actions/actionCreators";
 import beerReducer from "./beerReducer";
 
 describe("Given the beerReducer component", () => {
