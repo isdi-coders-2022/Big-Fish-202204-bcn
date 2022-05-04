@@ -26,7 +26,7 @@ describe("Given the DeleteBeerActionCreator function", () => {
 
       const action = deleteBeerActionCreator(2);
     });
-  }):
+  });
 });
   
 describe("Given the addBeerActionCreator function", () => {
