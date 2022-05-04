@@ -52,11 +52,11 @@ describe("Given the addBeerActionCreator function", () => {
 
 describe("Given the editBeerActionCreator function", () => {
   describe("When it receives the properties {name:'Mamañema', srm: 8.5}", () => {
-    test("Then it should return an action object with {type: 'edit-beer', properties: {name:'Mamañema', srm: 8.5}", () => {
+    test("Then it should return an action object with {type: 'edit-beer', editedBeer: {name:'Mamañema', srm: 8.5}", () => {
       const properties = { name: "Mamañema", srm: 8.5 };
       const expectedAction = {
         type: editBeerActionType,
-        properties: { name: "Mamañema", srm: 8.5 },
+        editedBeer: { name: "Mamañema", srm: 8.5 },
       };
 
       const action = editBeerActionCreator(properties);
