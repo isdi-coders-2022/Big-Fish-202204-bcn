@@ -1,21 +1,20 @@
-import beers from "../../data/BeersData";
 import { toggleFavouriteActionType } from "../actions/actionTypes";
 
-const beerReducer = (currentState, action) => {
-  let newState;
+const beerReducer = (beers, action) => {
+  let newbeers;
   switch (action.type) {
     case toggleFavouriteActionType:
-      newState = beers.map((beer) =>
-        beer.id === action.id
+      newbeers = beers.map((beer) => {
+        return beer.id === action.id
           ? { ...beer, favourite: !beer.favourite }
-          : { ...beer }
-      );
+          : { ...beer };
+      });
       break;
 
     default:
-      newState = [...currentState];
+      newbeers = [...beers];
   }
-  return newState;
+  return newbeers;
 };
 
 export default beerReducer;
