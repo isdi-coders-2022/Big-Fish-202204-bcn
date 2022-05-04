@@ -1,5 +1,6 @@
 import {
   rateBeerActionType,
+  deleteBeerActionType,
   toggleFavouriteActionType,
 } from "../actions/actionTypes";
 
@@ -12,6 +13,11 @@ const beerReducer = (beers, action) => {
         return beer.id === action.id
           ? { ...beer, favourite: !beer.favourite }
           : { ...beer };
+      });
+      break;
+    case deleteBeerActionType:
+      newbeers = beers.map((beer) => {
+        return beer.id !== action.id ? { ...beer } : "";
       });
       break;
 
