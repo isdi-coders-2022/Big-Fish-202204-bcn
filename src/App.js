@@ -1,3 +1,11 @@
+// import { Navigate, Route, Routes } from "react-router-dom";
+// import Header from "./components/Header/Header";
+// import Navigation from "./components/Navigation/Navigation";
+// import AddBeerPage from "./pages/AddBeerPage/AddBeerPage";
+// import BeerListPage from "./pages/BeerListPage/BeerListPage";
+// import MyBeersPage from "./pages/MyBeersPage/MyBeersPage";
+// import NotFoundPage from "./pages/NotFounPage/NotFoundPage";
+
 import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
