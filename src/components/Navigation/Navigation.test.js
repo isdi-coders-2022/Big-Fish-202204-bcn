@@ -10,9 +10,7 @@ describe("Given the Navigation component", () => {
 
       render(
         <BrowserRouter>
-          {/* <BeerProvider> */}
           <Navigation />
-          {/* </BeerProvider> */}
         </BrowserRouter>
       );
       const numberOfLi = screen.getAllByRole("listitem");
