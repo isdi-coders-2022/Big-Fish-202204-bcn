@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { appColor } from "../../mixings/elementsColours";
+import { appColor } from "../../colours/elementsColours";
 const headerBckgroundColor = appColor;
 
 const HeaderContainer = styled.header`
