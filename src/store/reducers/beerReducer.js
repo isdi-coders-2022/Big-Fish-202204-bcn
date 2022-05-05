@@ -4,6 +4,7 @@ import {
   toggleFavouriteActionType,
   editBeerActionType,
   loadBeersActionType,
+  loadLocalBeersActionType,
 } from "../actions/actionTypes";
 
 const beerReducer = (beers, action) => {
@@ -37,11 +38,17 @@ const beerReducer = (beers, action) => {
           : { ...beer };
       });
       break;
+
     case loadBeersActionType:
       newbeers = beers.map((beer) => {
         return { ...beer, favourite: false, userBeer: false, rating: 0 };
       });
       break;
+
+    case loadLocalBeersActionType:
+      newbeers = [...beers];
+      break;
+
     default:
       newbeers = [...beers];
   }
