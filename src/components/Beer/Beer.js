@@ -16,7 +16,7 @@ import BeerContext from "../../store/context/BeerContext";
 import useApiMyBeers from "../../hooks/useApiMyBeers";
 library.add(faHeartS, faHeartR);
 
-const Beer = (beer) => {
+const Beer = ({ beer }) => {
   const { dispatch } = useContext(BeerContext);
   const { deleteBeer, addBeer } = useApiMyBeers();
 
