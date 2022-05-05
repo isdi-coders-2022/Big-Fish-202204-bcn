@@ -11,7 +11,7 @@ const useApi = () => {
     );
     const beersArray = await response.json();
     dispatch(loadBeersActionCreator(beersArray));
-  }, []);
+  }, [dispatch]);
 
   return {
     getBeers,
