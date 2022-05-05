@@ -39,6 +39,7 @@ export const loadBeersActionCreator = (beers) => ({
   beers,
 });
 
-export const loadLocalBeersActionCreator = () => ({
+export const loadLocalBeersActionCreator = (beers) => ({
   type: loadLocalBeersActionType,
+  beers,
 });
