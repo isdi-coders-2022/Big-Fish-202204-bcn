@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import BeerProvider from "../../store/context/BeerProvider";
 import Beer from "./Beer";
 
 describe("Given the Beer component", () => {
@@ -6,7 +7,11 @@ describe("Given the Beer component", () => {
     test("Then it should render a heading with text 'Test Beer'", () => {
       const expectedText = "Test Beer";
 
-      render(<Beer name={expectedText} />);
+      render(
+        <BeerProvider>
+          <Beer name={expectedText} />
+        </BeerProvider>
+      );
       const beerheading = screen.getByRole("heading", { name: expectedText });
 
       expect(beerheading).toBeInTheDocument();
@@ -19,7 +24,11 @@ describe("Given the Beer component", () => {
       const isfavourite = true;
       const isUserBeer = true;
 
-      render(<Beer favourite={isfavourite} userBeer={isUserBeer} />);
+      render(
+        <BeerProvider>
+          <Beer favourite={isfavourite} userBeer={isUserBeer} />
+        </BeerProvider>
+      );
       const buttons = screen.getAllByRole("button");
       expect(buttons).toHaveLength(expectedNumberOfButtons);
     });
@@ -27,11 +36,15 @@ describe("Given the Beer component", () => {
 
   describe("When it receives favourite true and userBeer false", () => {
     test("Then it should render 1 button", () => {
-      const expectedNumberOfButtons = 1;
+      const expectedNumberOfButtons = 2;
       const isfavourite = true;
       const isUserBeer = false;
 
-      render(<Beer favourite={isfavourite} userBeer={isUserBeer} />);
+      render(
+        <BeerProvider>
+          <Beer favourite={isfavourite} userBeer={isUserBeer} />
+        </BeerProvider>
+      );
       const buttons = screen.getAllByRole("button");
       expect(buttons).toHaveLength(expectedNumberOfButtons);
     });
