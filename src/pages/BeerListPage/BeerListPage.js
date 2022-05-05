@@ -8,8 +8,9 @@ const BeerListPage = () => {
   const { beersState } = useContext(BeerContext);
   const { getBeers } = useApi();
 
+  const page = 1;
   useEffect(() => {
-    getBeers();
+    getBeers(page);
   }, [getBeers]);
 
   return (
