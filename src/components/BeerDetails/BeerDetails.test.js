@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import beer from "../../BeerData";
+import beer from "../../data/beer";
 import BeerDetails from "./BeerDetails";
 
 describe("Given the BeerDetails component", () => {
