@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import beers from "../../data/BeersData";
+import beers from "../../data/beers";
 import BeerProvider from "../../store/context/BeerProvider";
 import Beers from "./Beers";
 

@@ -1,4 +1,4 @@
-import beer from "../../BeerData";
+import beer from "../../data/beer";
 import BeerDetails from "../../components/BeerDetails/BeerDetails";
 import BeerDetailsContainer from "../../components/BeerDetailsContainer/BeerDetailsContainer";
 
