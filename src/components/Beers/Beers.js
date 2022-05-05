@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Beer from "../Beer/Beer";
-import beers from "../../data/BeersData";
 import BeerContainer from "../BeerContainer/BeerContainer";
 
 const BeersStyled = styled.ul`
@@ -8,7 +7,7 @@ const BeersStyled = styled.ul`
   flex-direction: column;
 `;
 
-const Beers = () => {
+const Beers = ({ beers }) => {
   return (
     <BeersStyled className="beers">
       {beers.map((beer) => (
