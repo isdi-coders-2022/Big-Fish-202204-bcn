@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import beers from "../../data/BeersData";
+import BeerProvider from "../../store/context/BeerProvider";
 import Beers from "./Beers";
 
 describe("Given the Beers component", () => {
@@ -7,7 +8,11 @@ describe("Given the Beers component", () => {
     test("Then it should render 4 beer card", () => {
       const expectedNumber = 4;
 
-      render(<Beers beers={beers} />);
+      render(
+        <BeerProvider>
+          <Beers beers={beers} />
+        </BeerProvider>
+      );
       const beerCardsNumber = screen.getAllByRole("listitem");
 
       expect(beerCardsNumber.length).toBe(expectedNumber);

@@ -7,9 +7,21 @@ import {
 import { faHeart as faHeartS } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../Button/Button";
+import { deleteBeerActionCreator } from "../../store/actions/ActionCreators/actionCreators";
+import { useContext } from "react";
+import BeerContext from "../../store/context/BeerContext";
 library.add(faHeartS, faHeartR);
 
-const Beer = ({ name, tagline, image_url: imgUrl, favourite, userBeer }) => {
+const Beer = ({
+  id,
+  name,
+  tagline,
+  image_url: imgUrl,
+  favourite,
+  userBeer,
+}) => {
+  const { dispatch } = useContext(BeerContext);
+
   return (
     <>
       <div className="beer-info">
@@ -32,13 +44,13 @@ const Beer = ({ name, tagline, image_url: imgUrl, favourite, userBeer }) => {
         <Button>
           <FontAwesomeIcon icon={favourite ? faHeartS : faHeartR} />
         </Button>
-        {userBeer ? (
-          <Button>
-            <FontAwesomeIcon icon={faCircleXmark} />
-          </Button>
-        ) : (
-          ""
-        )}
+        <Button
+          onClick={() => {
+            dispatch(deleteBeerActionCreator(id));
+          }}
+        >
+          <FontAwesomeIcon icon={faCircleXmark} />
+        </Button>
       </div>
     </>
   );
