@@ -1,17 +1,16 @@
-import { useEffect, useReducer } from "react";
+import { useContext, useEffect } from "react";
 import Beers from "../../components/Beers/Beers";
 import Search from "../../components/Search/Search";
-import useApi from "../../hooks/useApi";
-import beerReducer from "../../store/reducers/beerReducer";
+import useApiMyBeers from "../../hooks/useApiMyBeers";
+import BeerContext from "../../store/context/BeerContext";
 
 const MyBeersPage = () => {
-  const [beersState] = useReducer(beerReducer, []);
-  const { getBeers } = useApi();
+  const { beersState } = useContext(BeerContext);
+  const { getLocalBeers } = useApiMyBeers();
 
-  const page = 1;
   useEffect(() => {
-    getBeers(page);
-  }, [getBeers]);
+    getLocalBeers();
+  }, [getLocalBeers]);
 
   return (
     <div className="MyBeerListPage">

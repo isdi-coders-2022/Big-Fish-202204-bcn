@@ -46,7 +46,7 @@ const beerReducer = (beers, action) => {
       break;
 
     case loadLocalBeersActionType:
-      newbeers = [...beers];
+      newbeers = [...action.beers];
       break;
 
     default:
