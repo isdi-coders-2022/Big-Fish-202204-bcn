@@ -107,7 +107,7 @@ describe("Given the beerReducer component", () => {
         { id: 2, text: "UwU", userBeer: false, favourite: false, rating: 0 },
       ];
 
-      const action = loadBeersActionCreator();
+      const action = loadBeersActionCreator(beersGrup);
       const resultGrup = beerReducer(beersGrup, action);
 
       expect(resultGrup).toEqual(expectedBeersGrup);

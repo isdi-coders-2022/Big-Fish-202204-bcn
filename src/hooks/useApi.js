@@ -5,7 +5,6 @@ import BeerContext from "../store/context/BeerContext";
 const useApi = () => {
   // const urlAPI = "https://api.punkapi.com/v2/beers?page=1&per_page=12";
   const { dispatch } = useContext(BeerContext);
-  debugger;
   const getBeers = useCallback(async () => {
     const response = await fetch(
       `https://api.punkapi.com/v2/beers?page=${1}&per_page=12`

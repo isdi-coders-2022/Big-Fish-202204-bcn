@@ -7,7 +7,6 @@ import beerReducer from "../../store/reducers/beerReducer";
 const MyBeersPage = () => {
   const [beersState] = useReducer(beerReducer, []);
   const { getBeers } = useApi();
-  debugger;
   useEffect(() => {
     getBeers();
   }, [getBeers]);
