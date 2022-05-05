@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import Beers from "../../components/Beers/Beers";
 import Search from "../../components/Search/Search";
-import useApiMyBeers from "../../hooks/useApiMyBeers";
+import { useApiMyBeers } from "../../hooks/useApiMyBeers";
 import BeerContext from "../../store/context/BeerContext";
 
 const MyBeersPage = () => {

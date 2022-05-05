@@ -12,12 +12,7 @@ const Beers = ({ beers }) => {
     <BeersStyled className="beers">
       {beers.map((beer) => (
         <BeerContainer key={beer.id} className="beer">
-          <Beer
-            id={beer.id}
-            name={beer.name}
-            image_url={beer.image_url}
-            tagline={beer.tagline}
-          />
+          <Beer beer={beer} />
         </BeerContainer>
       ))}
     </BeersStyled>

@@ -7,29 +7,27 @@ import {
 import { faHeart as faHeartS } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../Button/Button";
-import { deleteBeerActionCreator } from "../../store/actions/ActionCreators/actionCreators";
+import {
+  deleteBeerActionCreator,
+  toggleFavouriteActionCreator,
+} from "../../store/actions/ActionCreators/actionCreators";
 import { useContext } from "react";
 import BeerContext from "../../store/context/BeerContext";
+import useApiMyBeers from "../../hooks/useApiMyBeers";
 library.add(faHeartS, faHeartR);
 
-const Beer = ({
-  id,
-  name,
-  tagline,
-  image_url: imgUrl,
-  favourite,
-  userBeer,
-}) => {
+const Beer = (beer) => {
   const { dispatch } = useContext(BeerContext);
+  const { deleteBeer, addBeer } = useApiMyBeers();
 
   return (
     <>
       <div className="beer-info">
         <div className="beer-info__top">
           <div className="name-container">
-            <h2 className="beer-info__top__name">{name}</h2>
+            <h2 className="beer-info__top__name">{beer.name}</h2>
           </div>
-          {userBeer ? (
+          {beer.userBeer ? (
             <Button>
               <FontAwesomeIcon icon={faPenToSquare} />
             </Button>
@@ -37,16 +35,24 @@ const Beer = ({
             ""
           )}
         </div>
-        <p className="tagline">{tagline}</p>
+        <p className="tagline">{beer.tagline}</p>
       </div>
-      <img src={imgUrl} alt={name} className="beer-img" />
+      <img src={beer.image_url} alt={beer.name} className="beer-img" />
       <div className="right-buttons-container">
-        <Button>
-          <FontAwesomeIcon icon={favourite ? faHeartS : faHeartR} />
+        <Button
+          onClick={() => {
+            if (!beer.favourite) {
+              addBeer(beer);
+            }
+            dispatch(toggleFavouriteActionCreator(beer.id));
+          }}
+        >
+          <FontAwesomeIcon icon={beer.favourite ? faHeartS : faHeartR} />
         </Button>
         <Button
           onClick={() => {
-            dispatch(deleteBeerActionCreator(id));
+            deleteBeer(beer.id);
+            dispatch(deleteBeerActionCreator(beer.id));
           }}
         >
           <FontAwesomeIcon icon={faCircleXmark} />
