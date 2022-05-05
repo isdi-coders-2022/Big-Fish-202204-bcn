@@ -1,9 +1,5 @@
 import styled from "styled-components";
-import {
-  appColor,
-  beerCardColor,
-  beerNameColor,
-} from "../../mixings/elementsColours";
+import { appColor, beerCardColor, beerNameColor } from "../../elementsColours";
 
 const BeerContainer = styled.li`
   height: 135px;

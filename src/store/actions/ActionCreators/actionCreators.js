@@ -33,6 +33,7 @@ export const rateBeerActionCreator = (id, rating) => ({
   rating,
 });
 
-export const loadBeersActionCreator = () => ({
+export const loadBeersActionCreator = (beers) => ({
   type: loadBeersActionType,
+  beers,
 });

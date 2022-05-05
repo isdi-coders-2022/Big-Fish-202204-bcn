@@ -3,7 +3,10 @@ import UIReducer from "../reducer/UIReducer";
 import UIContext from "./UIContext";
 
 const UIProvider = ({ children }) => {
-  const [loadingState, dispatch] = useReducer(UIReducer);
+  const initialUI = {
+    loading: false,
+  };
+  const [loadingState, dispatch] = useReducer(initialUI);
 
   return (
     <UIContext.Provider value={(loadingState, dispatch)}>

@@ -38,10 +38,9 @@ const beerReducer = (beers, action) => {
       });
       break;
     case loadBeersActionType:
-      newbeers = beers.map((beer) => {
-        return { ...beer, favourite: false, userBeer: false, rating: 0 };
-      });
+      newbeers = [...action.beers];
       break;
+
     default:
       newbeers = [...beers];
   }
