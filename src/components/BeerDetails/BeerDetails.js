@@ -45,7 +45,12 @@ const BeerDetails = ({ beer }) => {
             </ul>
           </div>
           <div className="info-image">
-            <img src={beer.image_url} alt={beer.name} />
+            <img
+              src={beer.image_url}
+              alt={beer.name}
+              height={450}
+              width={115}
+            />
           </div>
         </div>
       </section>

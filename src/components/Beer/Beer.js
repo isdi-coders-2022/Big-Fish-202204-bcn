@@ -37,7 +37,13 @@ const Beer = ({ beer }) => {
         </div>
         <p className="tagline">{beer.tagline}</p>
       </div>
-      <img src={beer.image_url} alt={beer.name} className="beer-img" />
+      <img
+        src={beer.image_url}
+        alt={beer.name}
+        className="beer-img"
+        width={38.31}
+        height={135}
+      />
       <div className="right-buttons-container">
         <Button
           onClick={() => {
