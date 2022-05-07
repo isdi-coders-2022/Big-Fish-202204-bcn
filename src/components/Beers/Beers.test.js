@@ -15,7 +15,7 @@ describe("Given the Beers component", () => {
       );
       const beerCardsNumber = screen.getAllByRole("listitem");
 
-      expect(beerCardsNumber.length).toBe(expectedNumber);
+      expect(beerCardsNumber).toHaveLength(expectedNumber);
     });
   });
 });
