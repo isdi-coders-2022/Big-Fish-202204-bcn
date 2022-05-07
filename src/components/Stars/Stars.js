@@ -10,9 +10,10 @@ const StyledStarsContainer = styled.div.attrs((props) => ({
   background-color: ${beerCardColor};
 
   .star {
-    color: ${beerCardColor};
+    color: ${appColor};
+    visibility: hidden;
     &--active {
-      color: ${appColor};
+      visibility: visible;
     }
   }
 `;
