@@ -5,7 +5,6 @@ import {
   beerNameColor,
 } from "../../colours/elementsColours";
 
-
 const BeerContainer = styled.li`
   height: 135px;
   width: 382px;
@@ -52,9 +51,7 @@ const BeerContainer = styled.li`
     padding: 0px 3px;
   }
   .beer-img {
-    width: 50px;
-
-    overflow: hidden;
+    width: 38.31px;
   }
 
   .tagline {
