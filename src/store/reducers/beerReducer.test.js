@@ -4,7 +4,6 @@ import {
   toggleFavouriteActionCreator,
   editBeerActionCreator,
   loadBeersActionCreator,
-  loadLocalBeersActionCreator,
 } from "../actions/ActionCreators/actionCreators";
 import beerReducer from "./beerReducer";
 
@@ -109,26 +108,6 @@ describe("Given the beerReducer component", () => {
       ];
 
       const action = loadBeersActionCreator(beersGrup);
-      const resultGrup = beerReducer(beersGrup, action);
-
-      expect(resultGrup).toEqual(expectedBeersGrup);
-    });
-  });
-
-  describe("When it receives a grup of beers and the order to load from LocalApi", () => {
-    test("Then it should return a same grup of beers with the news propieties userBeer,favourite,rating", () => {
-      const beersGrup = [
-        { id: 0, text: "UwU", userBeer: false, favourite: false, rating: 0 },
-        { id: 1, text: "UwU", userBeer: false, favourite: false, rating: 0 },
-        { id: 2, text: "UwU", userBeer: false, favourite: false, rating: 0 },
-      ];
-      const expectedBeersGrup = [
-        { id: 0, text: "UwU", userBeer: false, favourite: false, rating: 0 },
-        { id: 1, text: "UwU", userBeer: false, favourite: false, rating: 0 },
-        { id: 2, text: "UwU", userBeer: false, favourite: false, rating: 0 },
-      ];
-
-      const action = loadLocalBeersActionCreator(beersGrup);
       const resultGrup = beerReducer(beersGrup, action);
 
       expect(resultGrup).toEqual(expectedBeersGrup);
