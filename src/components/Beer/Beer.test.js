@@ -1,4 +1,7 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { click } from "@testing-library/user-event/dist/click";
+import beer from "../../data/beer";
 import BeerProvider from "../../store/context/BeerProvider";
 import Beer from "./Beer";
 
