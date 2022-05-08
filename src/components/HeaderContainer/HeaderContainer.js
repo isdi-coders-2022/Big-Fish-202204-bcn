@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import { appColor } from "../../colours/elementsColours";
-const headerBckgroundColor = appColor;
 
 const HeaderContainer = styled.header`
   display: flex;
   flex-direction: row;
-  background-color: ${headerBckgroundColor};
+  background-color: #16213e;
   width: 100vw;
   height: 90px;
   overflow: visible;
@@ -14,7 +12,7 @@ const HeaderContainer = styled.header`
     border-radius: 90px;
     width: 110px;
     height: 110px;
-    background: ${headerBckgroundColor};
+    background: #16213e;
     margin-left: 10px;
 
     img {
