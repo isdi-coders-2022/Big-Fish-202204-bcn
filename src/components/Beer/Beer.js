@@ -16,7 +16,10 @@ import BeerContext from "../../store/context/BeerContext";
 import useApiMyBeers from "../../hooks/useApiMyBeers";
 library.add(faHeartS, faHeartR);
 
-const Beer = ({ beer }) => {
+const Beer = ({
+  beer,
+  beer: { name, id, userBeer, tagline, image_url, favourite },
+}) => {
   const { dispatch } = useContext(BeerContext);
   const { deleteBeer, addBeer } = useApiMyBeers();
 
@@ -25,9 +28,9 @@ const Beer = ({ beer }) => {
       <div className="beer-info">
         <div className="beer-info__top">
           <div className="name-container">
-            <h2 className="beer-info__top__name">{beer.name}</h2>
+            <h2 className="beer-info__top__name">{name}</h2>
           </div>
-          {beer.userBeer ? (
+          {userBeer ? (
             <Button>
               <FontAwesomeIcon icon={faPenToSquare} />
             </Button>
@@ -35,11 +38,11 @@ const Beer = ({ beer }) => {
             ""
           )}
         </div>
-        <p className="tagline">{beer.tagline}</p>
+        <p className="tagline">{tagline}</p>
       </div>
       <img
-        src={beer.image_url}
-        alt={beer.name}
+        src={image_url}
+        alt={name}
         className="beer-img"
         width={38.31}
         height={135}
@@ -47,18 +50,18 @@ const Beer = ({ beer }) => {
       <div className="right-buttons-container">
         <Button
           onClick={() => {
-            if (!beer.favourite) {
+            if (!favourite) {
               addBeer(beer);
             }
-            dispatch(toggleFavouriteActionCreator(beer.id));
+            dispatch(toggleFavouriteActionCreator(id));
           }}
         >
-          <FontAwesomeIcon icon={beer.favourite ? faHeartS : faHeartR} />
+          <FontAwesomeIcon icon={favourite ? faHeartS : faHeartR} />
         </Button>
         <Button
           onClick={() => {
-            deleteBeer(beer.id);
-            dispatch(deleteBeerActionCreator(beer.id));
+            deleteBeer(id);
+            dispatch(deleteBeerActionCreator(id));
           }}
         >
           <FontAwesomeIcon icon={faCircleXmark} />
