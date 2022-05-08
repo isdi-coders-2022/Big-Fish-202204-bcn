@@ -18,6 +18,7 @@ export const useApiMyBeers = () => {
     await fetch(`${localApiUrl}/${id}`, {
       method: "DELETE",
     });
+    return id;
   };
 
   const addBeer = async (beer) => {
@@ -28,7 +29,7 @@ export const useApiMyBeers = () => {
       },
       body: JSON.stringify(beer),
     });
-    return response.json();
+    return await response.json();
   };
 
   return {
