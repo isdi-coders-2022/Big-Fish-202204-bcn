@@ -13,6 +13,7 @@ const useApi = () => {
       const response = await fetch(`${urlAPI}${beers12PackEndpoint}`);
       const beersArray = await response.json();
       dispatch(loadBeersActionCreator(beersArray));
+      return beersArray;
     },
     [dispatch]
   );
