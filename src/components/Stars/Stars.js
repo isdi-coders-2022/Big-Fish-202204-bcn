@@ -1,16 +1,15 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-import { appColor, beerCardColor } from "../../colours/elementsColours";
 
 const StyledStarsContainer = styled.div.attrs((props) => ({
   className: props.className,
 }))`
   width: fit-content;
-  background-color: ${beerCardColor};
+  background-color: #dfa30a;
 
   .star {
-    color: ${appColor};
+    color: #16213e;
     visibility: hidden;
     &--active {
       visibility: visible;
