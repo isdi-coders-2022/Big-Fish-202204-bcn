@@ -1,4 +1,4 @@
-import { render, renderHook, waitFor } from "@testing-library/react";
+import { renderHook, waitFor } from "@testing-library/react";
 import BeerProvider from "../store/context/BeerProvider";
 import useApiMyBeers from "./useApiMyBeers";
 import beers from "../data/beers";

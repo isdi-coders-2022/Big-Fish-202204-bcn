@@ -29,7 +29,7 @@ export const useApiMyBeers = () => {
       },
       body: JSON.stringify(beer),
     });
-    return await response.json();
+    return response.json();
   };
 
   return {
