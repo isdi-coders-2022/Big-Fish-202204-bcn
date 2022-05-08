@@ -10,8 +10,8 @@ export const useApiMyBeers = () => {
   const getLocalBeers = useCallback(async () => {
     const response = await fetch(`${localApiUrl}`);
     const beersArray = await response.json();
-
     dispatch(loadLocalBeersActionCreator(beersArray));
+    return beersArray;
   }, [dispatch]);
 
   const deleteBeer = async (id) => {

@@ -24,7 +24,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test-coverage": "npm run test -- --coverage --watchAll=false",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
   },
   "eslintConfig": {
     "extends": [
@@ -45,7 +46,8 @@
     ]
   },
   "devDependencies": {
-    "husky": "^7.0.0"
+    "husky": "^7.0.0",
+    "msw": "^0.39.2"
   },
   "jest": {
     "collectCoverageFrom": [

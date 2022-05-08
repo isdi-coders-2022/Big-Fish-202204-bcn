@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import BeerProvider from "../../store/context/BeerProvider";
 import BeerDetailsPage from "./BeerDetailsPage";
 
 describe("Given the BeerDetailsPage component", () => {
@@ -6,7 +7,11 @@ describe("Given the BeerDetailsPage component", () => {
     test("Then it should show a card with the name of the beer", () => {
       const beerName = "Punk IPA 2007 - 2010";
 
-      render(<BeerDetailsPage />);
+      render(
+        <BeerProvider>
+          <BeerDetailsPage />
+        </BeerProvider>
+      );
       const heading = screen.getByRole("heading", { name: beerName });
 
       expect(heading).toBeInTheDocument();
